@@ -10,6 +10,15 @@ fs.readFile('./discord_token', 'utf8', function(error, data) {
         throw error;
     }
 
+    client.on('guildMemberAdd', member => {
+      //great user in #welcome channel
+      const channel = member.guild.channels.find('name', 'welcome');
+      //do nothing if the channel wasn't found on this server
+      if (!channel) return;
+      //send the message, mentioning the member
+      channel.send(`Welcome to the server, ${member}`);
+    });
+
     //no errors, proceed
     client.on('ready', () => {
       console.log(`Logged in as ${client.user.tag}!`);
