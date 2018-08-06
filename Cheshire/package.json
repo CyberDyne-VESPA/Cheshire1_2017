@@ -1,0 +1,17 @@
+{
+  "name": "cheshire",
+  "version": "1.0.0",
+  "description": "Discord bot for Cyberdyne VESPA",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js",
+    "deploy": "nohup node index.js &"
+  },
+  "author": "John Leonardo",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "mocha": "^5.2.0"
+  }
+}
